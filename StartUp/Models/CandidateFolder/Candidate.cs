@@ -1,6 +1,7 @@
 ﻿using StartUp.Services.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,13 +15,7 @@ namespace StartUp.Models.CandidateFolder
         public string mName { get; set; }   
         public string lName { get; set; }
 
-        //CandidateDetails candidateDetails { get; set; }
-
-
-    
-
-
-
+        CandidateDetails CandidateDetails { get; set; }
 
         public Candidate()
         {

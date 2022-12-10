@@ -1,4 +1,4 @@
-﻿using StartUp.Models;
+﻿using StartUp.Models.CandidateFolder;
 using StartUp.Services.Data;
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ namespace StartUp.Services.DbInteractions
         public static void ReadAllCandidates()
         {
             app.Candidates.ToList().ForEach(c => Console.WriteLine(c));
-
+            
         }
         public static void SearchCandidateById(int Id)
         {

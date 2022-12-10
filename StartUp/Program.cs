@@ -1,4 +1,5 @@
 ﻿using System;
+using StartUp.Models.CandidateFolder;
 using StartUp.Services.DbInteractions;
 
 namespace StartUp
@@ -18,7 +19,7 @@ namespace StartUp
             //Db.CreateCandidate("Basilis", "", "Karas");
 
             Read.ReadAllCandidates();
-
+            Gender.GenderMaker();
 
 
 

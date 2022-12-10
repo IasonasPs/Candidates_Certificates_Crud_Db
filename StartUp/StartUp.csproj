@@ -61,6 +61,14 @@
     <Compile Include="Migrations\202212101514594_CandidateDetails.designer.cs">
       <DependentUpon>202212101514594_CandidateDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212102125566_MoreDetails.cs" />
+    <Compile Include="Migrations\202212102125566_MoreDetails.designer.cs">
+      <DependentUpon>202212102125566_MoreDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212102128094_MoreDetails1.cs" />
+    <Compile Include="Migrations\202212102128094_MoreDetails1.designer.cs">
+      <DependentUpon>202212102128094_MoreDetails1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
     <Compile Include="Models\CandidateFolder\Candidate.cs" />
@@ -88,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212101514594_CandidateDetails.resx">
       <DependentUpon>202212101514594_CandidateDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212102125566_MoreDetails.resx">
+      <DependentUpon>202212102125566_MoreDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212102128094_MoreDetails1.resx">
+      <DependentUpon>202212102128094_MoreDetails1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

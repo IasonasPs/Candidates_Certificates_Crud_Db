@@ -17,7 +17,7 @@ namespace StartUp.Services.Data
 
         public DbSet<CandidateDetails> CandidateDetails { get; set; }
 
-        //public DbSet<Gender> Genders { get; set; }  
+        public DbSet<Gender> Genders { get; set; }
 
 
         public AppDbContext() : base("name=MyConnection") 

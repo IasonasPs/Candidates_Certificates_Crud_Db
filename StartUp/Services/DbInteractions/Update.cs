@@ -1,4 +1,4 @@
-﻿using StartUp.Models;
+﻿using StartUp.Models.CandidateFolder;
 using StartUp.Services.Data;
 using System;
 using System.Collections.Generic;
