@@ -13,9 +13,9 @@ namespace StartUp.Models.CandidateFolder
         [ForeignKey("Candidate")]
         public int CandidateDetailsId { get; set; }
 
-        public string details { get; set; }
-
         public virtual Candidate Candidate { get; set; }
+
+        //public string details { get; set; }
 
         //[ForeignKey("GenderId")]
         public int GenderId { get; set; }
@@ -24,6 +24,7 @@ namespace StartUp.Models.CandidateFolder
         public string NativeLanguage { get; set; }
         public DateTime BirthDate { get; set; }
 
+        public string PhotoIdType { get; set; }//
         public int PhotoIdNumber { get; set; }
 
         public DateTime PhotoIdIssueDate { get; set; }
@@ -44,15 +45,15 @@ namespace StartUp.Models.CandidateFolder
 
                 }
 
-        public CandidateDetails(int candidateId,string details, int genderId)
+        public CandidateDetails(int candidateId, int genderId)
         {
             this.CandidateDetailsId = candidateId;
-            this.details = details;
+            //this.details = details;
             this.GenderId = genderId;
 
         }
 
-        public CandidateDetails(int candidateDetailsId, int genderId, string nativeLanguage, DateTime birthDate,
+        public CandidateDetails(int candidateDetailsId, int genderId, string nativeLanguage, DateTime birthDate,string photoIdType, //<----
             int photoIdNumber,DateTime photoIdIssueDate, string email, string address, string alternateAddress, 
             string countryOfresidence, string state, string city, int postalCode, string landlineNumber, string mobileNumber)
         {
@@ -60,6 +61,7 @@ namespace StartUp.Models.CandidateFolder
             GenderId = genderId;
             NativeLanguage = nativeLanguage;
             BirthDate = birthDate;
+            PhotoIdType = photoIdType;
             PhotoIdNumber = photoIdNumber;
             PhotoIdIssueDate = photoIdIssueDate;
             Email = email;
@@ -75,7 +77,7 @@ namespace StartUp.Models.CandidateFolder
 
         public override string ToString()
         {
-            return $"Candidate details of Id:{CandidateDetailsId} Details:{details} GenderId:{GenderId}";
+            return $"Candidate details of Id:{CandidateDetailsId}  GenderId:{GenderId} NativeLanguage:{NativeLanguage} Birth Date:{BirthDate} Id number:{PhotoIdNumber}";
         }
 
 

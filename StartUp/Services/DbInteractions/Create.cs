@@ -27,8 +27,9 @@ namespace StartUp.Services.DbInteractions
         }
 
         public static void CreateCandidate(string fName, string mName, string lName, int gender, string
-            nativeLanguage, DateTime birthdate, int idnumber, DateTime IdIssueDate, string email,string address,string alternateAddress , 
-            string countryOfresidence , string state , )
+                                           nativeLanguage, DateTime birthdate,string Idtype, int idnumber, DateTime IdIssueDate, 
+                                            string email,string address,string alternateAddress , 
+                                            string countryOfresidence , string state , string city , int postalCode , string landlineNumber , string mobileNumber)
         {
 
             
@@ -36,25 +37,15 @@ namespace StartUp.Services.DbInteractions
              
             var candidate = app.Candidates.Add(new Candidate(fName, mName, lName));
 
-            app.CandidateDetails.Add(new CandidateDetails(candidate.CandidateId,gender,nativeLanguage,
-                birthdate,idnumber, IdIssueDate , email,address, alternateAddress , countryOfresidence , state));
-
-            //var candidateDetails = app.CandidateDetails 
-            
-            
-            
-            
-            
-
-
-
-
-
-
+            app.CandidateDetails.Add(
+                new CandidateDetails(candidate.CandidateId,gender,nativeLanguage,
+                                     birthdate,Idtype,idnumber, IdIssueDate , email,address, alternateAddress , 
+                                     countryOfresidence , state ,city , postalCode , landlineNumber ,mobileNumber)
+                );
+               
             app.SaveChanges();
 
 
-            Console.WriteLine(gender);
 
         }
 
