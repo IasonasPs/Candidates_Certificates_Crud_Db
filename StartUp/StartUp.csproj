@@ -81,6 +81,10 @@
     <Compile Include="Migrations\202212111941233_Certificate1.designer.cs">
       <DependentUpon>202212111941233_Certificate1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212112109200_Scores.cs" />
+    <Compile Include="Migrations\202212112109200_Scores.designer.cs">
+      <DependentUpon>202212112109200_Scores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
     <Compile Include="Models\CandidateFolder\Candidate.cs" />
@@ -123,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212111941233_Certificate1.resx">
       <DependentUpon>202212111941233_Certificate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212112109200_Scores.resx">
+      <DependentUpon>202212112109200_Scores.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -46,10 +46,13 @@ namespace StartUp.Models
     {
         [ForeignKey("Attempt")]
         public int ScoresId { get; set; }
+        public Attempt Attempt { get; set; }
+
         public int score1 { get; set; }
         public int score2 { get; set; }
         public int score3 { get; set; }
         public int score4 { get; set; }
+
 
         public int sum 
         {

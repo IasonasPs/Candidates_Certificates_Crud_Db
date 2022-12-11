@@ -10,7 +10,7 @@ using StartUp.Models.CandidateFolder;
 
 namespace StartUp.Models
 {
-    internal class Attempt
+    public class Attempt
     {
 
         [Key]
@@ -21,8 +21,9 @@ namespace StartUp.Models
 
         public   Candidate  Candidate { get; set; }
 
-        public Certificate Certificate { get; set; }
+        internal Certificate Certificate { get; set; }
 
+        internal Scores Scores { get; set; }
         
         public Attempt()
         {
