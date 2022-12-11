@@ -8,13 +8,19 @@ using System.Threading.Tasks;
 
 namespace StartUp.Models.CandidateFolder
 {
-    internal class Gender
+    public class Gender
     {
         public int GenderId { get; set; }
 
         public string GenderName { get; set; }
 
          static AppDbContext app = new AppDbContext();
+
+        public Gender()
+        {
+                
+        }
+
 
         public Gender(string genderName)
         {
@@ -32,5 +38,13 @@ namespace StartUp.Models.CandidateFolder
             app.Genders.Add( new Gender("Other"));
             app.SaveChanges();
         }
+
+        public override string ToString()
+        {
+            return $"{GenderName}";
+        }
+
+
+
     }
 }
