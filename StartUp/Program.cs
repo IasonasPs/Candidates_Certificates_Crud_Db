@@ -19,7 +19,7 @@ namespace StartUp
             //Db.CreateCandidate("Basilis", "", "Karas");
 
             Read.ReadAllCandidates();
-            Gender.GenderMaker();
+            //Gender.GenderMaker();
 
 
 

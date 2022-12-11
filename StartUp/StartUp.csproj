@@ -53,21 +53,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202212101441173_InitialCreate.cs" />
-    <Compile Include="Migrations\202212101441173_InitialCreate.designer.cs">
-      <DependentUpon>202212101441173_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202212110007450_InitialCreate.cs" />
+    <Compile Include="Migrations\202212110007450_InitialCreate.designer.cs">
+      <DependentUpon>202212110007450_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212101514594_CandidateDetails.cs" />
-    <Compile Include="Migrations\202212101514594_CandidateDetails.designer.cs">
-      <DependentUpon>202212101514594_CandidateDetails.cs</DependentUpon>
+    <Compile Include="Migrations\202212110011404_AddingPkFk.cs" />
+    <Compile Include="Migrations\202212110011404_AddingPkFk.designer.cs">
+      <DependentUpon>202212110011404_AddingPkFk.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212102125566_MoreDetails.cs" />
-    <Compile Include="Migrations\202212102125566_MoreDetails.designer.cs">
-      <DependentUpon>202212102125566_MoreDetails.cs</DependentUpon>
+    <Compile Include="Migrations\202212110021383_AddingPkFk1.cs" />
+    <Compile Include="Migrations\202212110021383_AddingPkFk1.designer.cs">
+      <DependentUpon>202212110021383_AddingPkFk1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212102128094_MoreDetails1.cs" />
-    <Compile Include="Migrations\202212102128094_MoreDetails1.designer.cs">
-      <DependentUpon>202212102128094_MoreDetails1.cs</DependentUpon>
+    <Compile Include="Migrations\202212110023212_AddingPkFk2.cs" />
+    <Compile Include="Migrations\202212110023212_AddingPkFk2.designer.cs">
+      <DependentUpon>202212110023212_AddingPkFk2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
@@ -91,17 +91,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212101441173_InitialCreate.resx">
-      <DependentUpon>202212101441173_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212110007450_InitialCreate.resx">
+      <DependentUpon>202212110007450_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212101514594_CandidateDetails.resx">
-      <DependentUpon>202212101514594_CandidateDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212110011404_AddingPkFk.resx">
+      <DependentUpon>202212110011404_AddingPkFk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212102125566_MoreDetails.resx">
-      <DependentUpon>202212102125566_MoreDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212110021383_AddingPkFk1.resx">
+      <DependentUpon>202212110021383_AddingPkFk1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212102128094_MoreDetails1.resx">
-      <DependentUpon>202212102128094_MoreDetails1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212110023212_AddingPkFk2.resx">
+      <DependentUpon>202212110023212_AddingPkFk2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

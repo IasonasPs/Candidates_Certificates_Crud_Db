@@ -10,12 +10,11 @@ namespace StartUp.Models.CandidateFolder
     internal class CandidateDetails
     {
         [Key]
-        public int DetailsId { get; set; }
-
+        public int Id { get; set; }
 
         public string details { get; set; }
 
-        Gender Gender { get; set; }
+        //Gender Gender { get; set; }
 
 
 

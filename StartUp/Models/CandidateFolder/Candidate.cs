@@ -1,6 +1,7 @@
 ﻿using StartUp.Services.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,16 @@ namespace StartUp.Models.CandidateFolder
 {
     public class Candidate
     {
-        public int CandidateId { get; set; }
+        public int Id { get; set; }
         public string fName { get; set; }
         public string mName { get; set; }   
         public string lName { get; set; }
 
+        [Required]
+        [ForeignKey("Id")]
         CandidateDetails CandidateDetails { get; set; }
+        //public int CandidateDetails_Id { get; set; }
+
 
         public Candidate()
         {

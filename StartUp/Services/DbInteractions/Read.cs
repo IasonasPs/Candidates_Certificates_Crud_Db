@@ -24,7 +24,7 @@ namespace StartUp.Services.DbInteractions
         {
             try
             {
-                Console.WriteLine(app.Candidates.Where(x => x.CandidateId == Id).Single());
+                Console.WriteLine(app.Candidates.Where(x => x.Id == Id).Single());
             }
             catch (Exception e)
             {

@@ -26,8 +26,11 @@ namespace StartUp.Services.DbInteractions
             app.SaveChanges();
         }
 
-        public static void CreateCandidate(string fName, string mName, string lName,string gender)
+        public static void CreateCandidate(string fName, string mName, string lName,int gender,string details)
         {
+
+
+
             app.Candidates.Add(new Candidate(fName, mName, lName));
             app.SaveChanges();
 
