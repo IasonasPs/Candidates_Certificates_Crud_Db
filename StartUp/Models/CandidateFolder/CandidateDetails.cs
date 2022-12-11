@@ -60,7 +60,7 @@ namespace StartUp.Models.CandidateFolder
             CandidateDetailsId = candidateDetailsId;
             GenderId = genderId;
             NativeLanguage = nativeLanguage;
-            BirthDate = birthDate;
+            BirthDate = birthDate.Date;
             PhotoIdType = photoIdType;
             PhotoIdNumber = photoIdNumber;
             PhotoIdIssueDate = photoIdIssueDate;
@@ -77,7 +77,9 @@ namespace StartUp.Models.CandidateFolder
 
         public override string ToString()
         {
-            return $"Candidate details of Id:{CandidateDetailsId}  GenderId:{GenderId} NativeLanguage:{NativeLanguage} Birth Date:{BirthDate} Id number:{PhotoIdNumber}";
+            return $"Candidate's details:\nId:{CandidateDetailsId},GenderId:{GenderId},NativeLanguage:{NativeLanguage},Birth Date:{BirthDate.Date}," +
+                $"Id Type:{PhotoIdType},Id number:{PhotoIdNumber},Id issue date:{PhotoIdIssueDate.Date},email:{Email},Address:{Address},Alternate Address:{AlternateAddress}," +
+                $"CountryOfresidence:{CountryOfresidence},State:{State},City:{City},PostalCode:{PostalCode},Landline Number:{LandlineNumber},Mobile Number:{MobileNumber}";
         }
 
 

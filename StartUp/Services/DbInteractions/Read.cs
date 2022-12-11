@@ -17,14 +17,24 @@ namespace StartUp.Services.DbInteractions
 
         public static void ReadAllCandidates()
         {
-            app.Candidates.ToList().ForEach(c => Console.WriteLine(c));
-            
+            var myList = app.Candidates.ToList();
+            foreach (var item in myList)
+            {
+                Console.WriteLine(item);
+                var details = app.CandidateDetails.Where(x => x.CandidateDetailsId == item.CandidateId).SingleOrDefault();
+                Console.WriteLine(details);
+                Console.WriteLine("- - - - - -  - - - - -");
+            }            
         }
+
         public static void SearchCandidateById(int Id)
         {
             try
             {
-                Console.WriteLine(app.Candidates.Where(x => x.CandidateId == Id).Single());
+                var candidate = app.Candidates.Where(x => x.CandidateId == Id).Single();
+                Console.WriteLine(candidate);
+                var details = app.CandidateDetails.Where(x => x.CandidateDetailsId == candidate.CandidateId).Single();
+                Console.WriteLine(details);
             }
             catch (Exception e)
             {
@@ -32,38 +42,43 @@ namespace StartUp.Services.DbInteractions
                 Console.WriteLine(e.Message);
             }
         }
-        public static void SearchCandidateBylName(string lName)
-        {
-            try
-            {
-                Console.WriteLine(app.Candidates.Where(x => x.lName == lName).SingleOrDefault());
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("----------------");
-                //Console.WriteLine(e.Message);
-                Console.WriteLine("There are more than one Candidates with this last name");
-                Console.WriteLine("----------------");
-                Console.WriteLine("Please enter the first name of the desired candidate:");
-                Console.WriteLine("----------------");
-                List<Candidate> list = app.Candidates.Where(x => x.lName == lName).ToList<Candidate>();
 
-                string fname = Console.ReadLine();
+        //public static void SearchCandidateBylName(string lName)
+        //{
+        //    try
+        //    { 
+        //             var candidate = app.Candidates.Where(x => x.lName == lName).SingleOrDefault();
+        //            Console.WriteLine(candidate);
+                       
+                    
+        //            var details = app.CandidateDetails.Where(x => x.CandidateDetailsId == candidate.CandidateId).SingleOrDefault();
+        //            Console.WriteLine(details); 
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("----------------");
+        //        //Console.WriteLine(e.Message);
+        //        Console.WriteLine("There are more than one Candidates with this last name");
+        //        Console.WriteLine("----------------");
+        //        Console.WriteLine("Please enter the first name of the desired candidate:");
+        //        Console.WriteLine("----------------");
 
-                foreach (var item in list)
-                {
-                    if (item.fName == fname)
-                    {
-                        Console.WriteLine(item);
-                    }
-
-                }
+        //        string fname = Console.ReadLine();
+        //        List<Candidate> list = app.Candidates.Where(x => x.lName == lName).ToList<Candidate>();
 
 
-                //app.Candidates.Where(x => x.lName == lName).SingleOrDefault())
+        //        foreach (var item in list)
+        //        {
+        //            if (item.fName == fname)
+        //            {
+        //                Console.WriteLine(item);
+        //            }
 
-            }
-        }
+        //        }
+
+                 
+        //    }
+        //}
 
 
     }

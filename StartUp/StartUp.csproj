@@ -69,6 +69,18 @@
     <Compile Include="Migrations\202212111443457_ObjectComplete2.designer.cs">
       <DependentUpon>202212111443457_ObjectComplete2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212111904455_ObjectCompleteVerification.cs" />
+    <Compile Include="Migrations\202212111904455_ObjectCompleteVerification.designer.cs">
+      <DependentUpon>202212111904455_ObjectCompleteVerification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111924151_Certificate.cs" />
+    <Compile Include="Migrations\202212111924151_Certificate.designer.cs">
+      <DependentUpon>202212111924151_Certificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111941233_Certificate1.cs" />
+    <Compile Include="Migrations\202212111941233_Certificate1.designer.cs">
+      <DependentUpon>202212111941233_Certificate1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
     <Compile Include="Models\CandidateFolder\Candidate.cs" />
@@ -102,6 +114,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212111443457_ObjectComplete2.resx">
       <DependentUpon>202212111443457_ObjectComplete2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111904455_ObjectCompleteVerification.resx">
+      <DependentUpon>202212111904455_ObjectCompleteVerification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111924151_Certificate.resx">
+      <DependentUpon>202212111924151_Certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111941233_Certificate1.resx">
+      <DependentUpon>202212111941233_Certificate1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

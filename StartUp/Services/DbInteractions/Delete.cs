@@ -21,7 +21,8 @@ namespace StartUp.Services.DbInteractions
         public static void DeleteCandidate(int Id)
         {
 
-            //app.Candidates.Remove(app.Candidates.Find(Id));
+            app.Candidates.Remove(app.Candidates.Find(Id));
+            app.CandidateDetails.Remove(app.CandidateDetails.Find(Id));
             Console.WriteLine($"This Candidate was delete :{app.Candidates.Remove(app.Candidates.Find(Id))}");
             app.SaveChanges();
         }
