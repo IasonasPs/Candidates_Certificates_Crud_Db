@@ -11,15 +11,12 @@ namespace StartUp.Models.CandidateFolder
 {
     public class Candidate
     {
-        public int Id { get; set; }
-        public string fName { get; set; }
+        public int  CandidateId { get; set; }
         public string mName { get; set; }   
+        public string fName { get; set; }
         public string lName { get; set; }
 
-        [Required]
-        [ForeignKey("Id")]
-        CandidateDetails CandidateDetails { get; set; }
-        //public int CandidateDetails_Id { get; set; }
+      public virtual CandidateDetails  Details { get; set; }    
 
 
         public Candidate()

@@ -53,21 +53,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202212110007450_InitialCreate.cs" />
-    <Compile Include="Migrations\202212110007450_InitialCreate.designer.cs">
-      <DependentUpon>202212110007450_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202212111136365_InitialCreate.cs" />
+    <Compile Include="Migrations\202212111136365_InitialCreate.designer.cs">
+      <DependentUpon>202212111136365_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212110011404_AddingPkFk.cs" />
-    <Compile Include="Migrations\202212110011404_AddingPkFk.designer.cs">
-      <DependentUpon>202212110011404_AddingPkFk.cs</DependentUpon>
+    <Compile Include="Migrations\202212111252524_ObjectComplete.cs" />
+    <Compile Include="Migrations\202212111252524_ObjectComplete.designer.cs">
+      <DependentUpon>202212111252524_ObjectComplete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212110021383_AddingPkFk1.cs" />
-    <Compile Include="Migrations\202212110021383_AddingPkFk1.designer.cs">
-      <DependentUpon>202212110021383_AddingPkFk1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212110023212_AddingPkFk2.cs" />
-    <Compile Include="Migrations\202212110023212_AddingPkFk2.designer.cs">
-      <DependentUpon>202212110023212_AddingPkFk2.cs</DependentUpon>
+    <Compile Include="Migrations\202212111254225_ObjectComplete1.cs" />
+    <Compile Include="Migrations\202212111254225_ObjectComplete1.designer.cs">
+      <DependentUpon>202212111254225_ObjectComplete1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
@@ -91,17 +87,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212110007450_InitialCreate.resx">
-      <DependentUpon>202212110007450_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212111136365_InitialCreate.resx">
+      <DependentUpon>202212111136365_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212110011404_AddingPkFk.resx">
-      <DependentUpon>202212110011404_AddingPkFk.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212111252524_ObjectComplete.resx">
+      <DependentUpon>202212111252524_ObjectComplete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212110021383_AddingPkFk1.resx">
-      <DependentUpon>202212110021383_AddingPkFk1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212110023212_AddingPkFk2.resx">
-      <DependentUpon>202212110023212_AddingPkFk2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212111254225_ObjectComplete1.resx">
+      <DependentUpon>202212111254225_ObjectComplete1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
