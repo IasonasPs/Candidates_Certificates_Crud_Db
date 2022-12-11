@@ -12,9 +12,9 @@ namespace StartUp.Models.CandidateFolder
     public class Candidate
     {
         public int  CandidateId { get; set; }
-        public string mName { get; set; }   
         public string fName { get; set; }
         public string lName { get; set; }
+        public string mName { get; set; }   
 
       public virtual CandidateDetails  Details { get; set; }    
 
@@ -24,6 +24,13 @@ namespace StartUp.Models.CandidateFolder
 
         }
 
+        public Candidate(string fName, string lName)
+        {
+            this.fName = fName;
+            this.lName = lName;
+           
+        }
+
         public Candidate(string fName, string mName, string lName)
         {
             this.fName = fName;
@@ -31,15 +38,6 @@ namespace StartUp.Models.CandidateFolder
             this.lName = lName;
         }
 
-        public Candidate(string fName, string lName)
-        {
-            this.fName = fName;
-            this.lName = lName;
-            //Console.WriteLine("inside ctor");
-            //Console.WriteLine(this);
-            //app.Candidates.Add(this);
-            //app.SaveChanges();
-        }
 
 
 

@@ -65,6 +65,10 @@
     <Compile Include="Migrations\202212111254225_ObjectComplete1.designer.cs">
       <DependentUpon>202212111254225_ObjectComplete1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212111443457_ObjectComplete2.cs" />
+    <Compile Include="Migrations\202212111443457_ObjectComplete2.designer.cs">
+      <DependentUpon>202212111443457_ObjectComplete2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
     <Compile Include="Models\CandidateFolder\Candidate.cs" />
@@ -95,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212111254225_ObjectComplete1.resx">
       <DependentUpon>202212111254225_ObjectComplete1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111443457_ObjectComplete2.resx">
+      <DependentUpon>202212111443457_ObjectComplete2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
