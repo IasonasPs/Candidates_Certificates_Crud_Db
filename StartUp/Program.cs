@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Net.Mail;
 using StartUp.Models.CandidateFolder;
 using StartUp.Services.Data;
 using StartUp.Services.DbInteractions;
@@ -12,7 +13,7 @@ namespace StartUp
         {
             Console.WriteLine("Main starting...");
 
-            AppDbContext app = new AppDbContext();
+            //AppDbContext app = new AppDbContext();
 
 
             //Gender.GenderMaker();
@@ -27,8 +28,48 @@ namespace StartUp
             //Console.WriteLine("middle");
 
 
+            //------------------------------------------------------------------------------------
+            //DateTime
+            //Console.WriteLine("Enter birth date in the form :12/28/1999  ");
+            //var input = Console.ReadLine();
+            //DateTime inputd = DateTime.Parse(input);
+            //Console.WriteLine(input);
 
 
+            Console.WriteLine("----");
+            //Console.ReadKey();
+            Console.WriteLine("----");
+
+            //DateTime date1 = new DateTime(2015, 12, 25);
+            //Console.WriteLine(date1.ToString()); // 12/25/2015 12:00:00 AM    
+
+            //------------------------------------------------------------------------------------
+            //------------------------------------------------------------------------------------
+            // Email Validation
+            
+                try
+                {
+                    string email = "iasonas.ps@gmail.com";
+                    Console.WriteLine($"The email is {email}");
+                    var mail = new MailAddress(email);
+                    bool isValidEmail = mail.Host.Contains(".");
+                    if (!isValidEmail)
+                    {
+                        Console.WriteLine($"The email is invalid");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"The email is valid");
+                    }
+                    Console.ReadLine();
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine($"The email is invalid");
+                    Console.ReadLine();
+                }
+            //------------------------------------------------------------------------------------
+            //------------------------------------------------------------------------------------
 
 
 
@@ -50,10 +91,10 @@ namespace StartUp
 
             //Console.WriteLine("________________");
 
-             
+
 
             Console.WriteLine("------------------------");
-            Read.ReadAllCandidates();
+            //Read.ReadAllCandidates();
             Console.WriteLine("The End");
 
         }

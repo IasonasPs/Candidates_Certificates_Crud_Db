@@ -12,8 +12,8 @@ namespace StartUp.Models.CandidateFolder
     public class Candidate
     {
         public int  CandidateId { get; set; }
-        public string fName { get; set; }
         public string mName { get; set; }   
+        public string fName { get; set; }
         public string lName { get; set; }
 
       public virtual CandidateDetails  Details { get; set; }    
