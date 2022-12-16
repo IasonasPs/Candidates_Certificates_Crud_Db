@@ -16,32 +16,19 @@ namespace StartUp
             Console.WriteLine("Main starting...");
 
             AppDbContext context = new AppDbContext();
-            //Gender.GenderMaker();
-
             
-            //----------------
-            //Sample Certificates
-           
-            //----------------
-
-
-           
             Console.WriteLine("------------------------");
 
-
-            //context.Candidates.Add(new Candidate("alex", "Michalis", "Kazantzakis"));
-            //context.SaveChanges();
-
-            Read.SearchCandidateByLastName("Kazantzakis");
-
-
+            var x =context.Scores.Add(new Scores(20, 20, 20, 20));
+            var y = context.Entry(x).Entity.sum;
+            var z =context.Attempts.Add(new Attempt(1, 2, new DateTime(2019, 12, 19),y,7));
+            context.SaveChanges();
 
             Console.WriteLine("------------------------");
-
-             
+            
 
             //--------------------------------------------------------------------------------------------------------
-          ;
+          
 
             Console.WriteLine("The End");
 

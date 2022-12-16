@@ -38,19 +38,6 @@ namespace StartUp.Models.CandidateFolder
             this.lName = lName;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         public override string ToString() 
         {
             return $"Candidate's name is {fName} {lName}." ;

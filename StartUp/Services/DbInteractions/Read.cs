@@ -78,42 +78,8 @@ namespace StartUp.Services.DbInteractions
 
         }
 
-            //public static void SearchCandidateBylName(string lName)
-            //{
-            //    try
-            //    { 
-            //             var candidate = app.Candidates.Where(x => x.lName == lName).SingleOrDefault();
-            //            Console.WriteLine(candidate);
-
-
-            //            var details = app.CandidateDetails.Where(x => x.CandidateDetailsId == candidate.CandidateId).SingleOrDefault();
-            //            Console.WriteLine(details); 
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        Console.WriteLine("----------------");
-            //        //Console.WriteLine(e.Message);
-            //        Console.WriteLine("There are more than one Candidates with this last name");
-            //        Console.WriteLine("----------------");
-            //        Console.WriteLine("Please enter the first name of the desired candidate:");
-            //        Console.WriteLine("----------------");
-
-            //        string fname = Console.ReadLine();
-            //        List<Candidate> list = app.Candidates.Where(x => x.lName == lName).ToList<Candidate>();
-
-
-            //        foreach (var item in list)
-            //        {
-            //            if (item.fName == fname)
-            //            {
-            //                Console.WriteLine(item);
-            //            }
-
-            //        }
-
-
-            //    }
-            //}
+           
+           
 
 
         }

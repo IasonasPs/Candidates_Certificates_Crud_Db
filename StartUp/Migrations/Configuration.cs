@@ -53,16 +53,16 @@
                 context.SaveChanges(); 
             }
             //---------------------------CANDIDATES-----AND------DETAILS----------------------------------------------
-            //--------------------------------------------------------------------------------------------------------PETRAS
             if (context.Candidates.Where(c => c.lName == "Petras").Count() == 0 &&
                 context.Candidates.Where(c => c.lName == "Kazantzakis").Count() == 0 &&
                 context.Candidates.Where(c => c.lName == "Zorbas").Count() == 0 &&
                 context.Candidates.Where(c => c.lName == "Papadopoulou").Count() == 0)
             {
+            //--------------------------------------------------------------------------------------------------------PETRAS
                 context.Candidates.Add(new Candidate("Petros", "Petrou", "Petras"));
             context.SaveChanges();
-            var x = context.Candidates.Where(c => c.lName == "Petras").FirstOrDefault().CandidateId;
-            context.CandidateDetails.Add(new CandidateDetails(x, 1, "Greek", DateTime.Parse("12 / 12 / 1980").Date, "Passport", 1278, DateTime.Parse("12 / 12 / 2001").Date,
+            var x1 = context.Candidates.Where(c => c.lName == "Petras").FirstOrDefault().CandidateId;
+            context.CandidateDetails.Add(new CandidateDetails(x1, 1, "Greek", DateTime.Parse("12 / 12 / 1980").Date, "Passport", 1278, DateTime.Parse("12 / 12 / 2001").Date,
             "petras@gmail.com", "Petralonon 3", "", "Greece", "Attica", "Petralona", 67543, "21098765", "69087654"));
             context.SaveChanges();
             //--------------------------------------------------------------------------------------------------------KAZANTZAKIS
@@ -88,9 +88,17 @@
             context.SaveChanges();
             }
             //-------------------------------------------------------------------------------------------------------- 
+            //-----------------------------------ATTEMPTS------------------------------------------------------------- 
             //-------------------------------------------------------------------------------------------------------- 
-            //-------------------------------------------------------------------------------------------------------- 
-
+            //--PETRAS------------------------------------------------------------------------------------------------
+            //var q = context.Scores.Add(new Models.Scores(20, 20, 20, 20));
+            //var w = context.Entry(q).Entity.sum;
+            //var r = context.Attempts.Add(new Attempt(7, 1, new DateTime(2019, 12, 19), w));
+            //context.SaveChanges();
+            //var q1 = context.Scores.Add(new Models.Scores(20, 20, 0, 0));
+            //var w1 = context.Entry(q1).Entity.sum;
+            //var r1 = context.Attempts.Add(new Attempt(7, 2, new DateTime(2020, 1, 19), w1));
+            //context.SaveChanges();
 
 
 

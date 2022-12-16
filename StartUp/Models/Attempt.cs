@@ -16,22 +16,42 @@ namespace StartUp.Models
 
         [Key]
         public int  MainId { get; set; }
-             
-        //Ebgala ena property comment pou eixe edo
 
+        public int CandidateId { get; set; }
         public Candidate  Candidate { get; set; }
 
+        public int CertificateId { get; set; }
         public Certificate Certificate { get; set; }
 
         public DateTime ExamDate { get; set; }
-
-        private int _candidateScore ;
+        //---------------------------------------------------------------------------------------------------
+       
         public int CandidateScore
         {
-            get { return _candidateScore; }
-            private set { _candidateScore = app.Scores.Where(x => x.ScoresId == MainId).SingleOrDefault().sum; }
+            get;
+             set;
+        }
+        private string _pOrf;
+        public string PassOrFail 
+        {
+            get
+            {
+
+                if (CandidateScore > 60)
+                {
+                    _pOrf = "Pass";
+                }
+                else
+                {
+                    _pOrf = "Fail";
+                }
+                return _pOrf;
+            }
+            private set { }
+             
         }
 
+        
         internal Scores Scores { get; set; }
         
         public Attempt()
@@ -39,7 +59,14 @@ namespace StartUp.Models
 
         }
 
-       
+        public Attempt(int candidateId, int certificateId, DateTime examDate, int candidateScore )
+        {
+            CandidateId = candidateId;
+            CertificateId = certificateId;
+            ExamDate = examDate;
+            CandidateScore = candidateScore;
+         
+        }
     }
 
 
@@ -60,8 +87,8 @@ namespace StartUp.Models
         private int _sum;
         public int sum
         {
-            get { return _sum; }
-            private set { _sum = score1 + score2 + score3 + score4; }
+            get { return _sum = score1 + score2 + score3 + score4; }
+            private set {}
         }
 
         public Scores(int score1, int score2, int score3, int score4)

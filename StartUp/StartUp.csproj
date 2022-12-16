@@ -89,6 +89,14 @@
     <Compile Include="Migrations\202212152006257_Scores2nd.designer.cs">
       <DependentUpon>202212152006257_Scores2nd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212161737260_AttemptTableFix.cs" />
+    <Compile Include="Migrations\202212161737260_AttemptTableFix.designer.cs">
+      <DependentUpon>202212161737260_AttemptTableFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212161746380_AttemptTableFixScoresId.cs" />
+    <Compile Include="Migrations\202212161746380_AttemptTableFixScoresId.designer.cs">
+      <DependentUpon>202212161746380_AttemptTableFixScoresId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
     <Compile Include="Models\CandidateFolder\Candidate.cs" />
@@ -138,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212152006257_Scores2nd.resx">
       <DependentUpon>202212152006257_Scores2nd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212161737260_AttemptTableFix.resx">
+      <DependentUpon>202212161737260_AttemptTableFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212161746380_AttemptTableFixScoresId.resx">
+      <DependentUpon>202212161746380_AttemptTableFixScoresId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

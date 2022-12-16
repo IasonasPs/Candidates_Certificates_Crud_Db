@@ -76,9 +76,6 @@ namespace StartUp.Models.CandidateFolder
         }
 
 
-
-
-
         public override string ToString()
         {
             return $"---------------------------------------------------------------------------------------------------------------------\nCandidate's details:\nId:{CandidateDetailsId},GenderId:{GenderId},NativeLanguage:{NativeLanguage},Birth Date:{BirthDate.Date}," +
