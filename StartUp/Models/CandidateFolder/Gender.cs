@@ -31,13 +31,7 @@ namespace StartUp.Models.CandidateFolder
         //Gender female = new Gender("female");
         //Gender other = new Gender("other");
 
-        public static void GenderMaker()
-        {
-            app.Genders.Add(new Gender("Male"));
-            app.Genders.Add( new Gender("Female"));
-            app.Genders.Add( new Gender("Other"));
-            app.SaveChanges();
-        }
+       
 
         public override string ToString()
         {

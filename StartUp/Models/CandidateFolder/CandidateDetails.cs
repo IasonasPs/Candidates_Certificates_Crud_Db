@@ -75,11 +75,16 @@ namespace StartUp.Models.CandidateFolder
             MobileNumber = mobileNumber;
         }
 
+
+
+
+
         public override string ToString()
         {
-            return $"Candidate's details:\nId:{CandidateDetailsId},GenderId:{GenderId},NativeLanguage:{NativeLanguage},Birth Date:{BirthDate.Date}," +
+            return $"---------------------------------------------------------------------------------------------------------------------\nCandidate's details:\nId:{CandidateDetailsId},GenderId:{GenderId},NativeLanguage:{NativeLanguage},Birth Date:{BirthDate.Date}," +
                 $"Id Type:{PhotoIdType},Id number:{PhotoIdNumber},Id issue date:{PhotoIdIssueDate.Date},email:{Email},Address:{Address},Alternate Address:{AlternateAddress}," +
-                $"CountryOfresidence:{CountryOfresidence},State:{State},City:{City},PostalCode:{PostalCode},Landline Number:{LandlineNumber},Mobile Number:{MobileNumber}";
+                $"CountryOfresidence:{CountryOfresidence},State:{State},City:{City},PostalCode:{PostalCode},Landline Number:{LandlineNumber},Mobile Number:{MobileNumber}" +
+                $"\n----------------------------------------------------------------------------------------------------------------------";
         }
 
 

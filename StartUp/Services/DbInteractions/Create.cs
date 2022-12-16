@@ -138,7 +138,7 @@ namespace StartUp.Services.DbInteractions
             } while (idIssuedate == DateTime.Now.Date || idIssuedate > DateTime.Now.Date || idIssuedate < new DateTime(1900, 1, 1));
 
             //Console.WriteLine(idIssuedate);
-
+           
             ////-----------------------------------------------------------------------------------
 
             bool isValidEmail = false;
@@ -204,7 +204,16 @@ namespace StartUp.Services.DbInteractions
             app.Certificates.Add(new Certificate(title,topicDescription));
             app.SaveChanges();
         }
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------
+        //Attempts
+        public static void AddNewAttempt()
+        {
+
+
+        }
 
 
     }
 }
+ 

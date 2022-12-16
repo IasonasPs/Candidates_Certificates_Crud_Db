@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202212112109200_Scores.designer.cs">
       <DependentUpon>202212112109200_Scores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212152006257_Scores2nd.cs" />
+    <Compile Include="Migrations\202212152006257_Scores2nd.designer.cs">
+      <DependentUpon>202212152006257_Scores2nd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
     <Compile Include="Models\CandidateFolder\Candidate.cs" />
@@ -96,6 +100,7 @@
     <Compile Include="Services\Data\AppDbContext.cs" />
     <Compile Include="Services\DbInteractions\Create.cs" />
     <Compile Include="Services\DbInteractions\Delete.cs" />
+    <Compile Include="Services\DbInteractions\NotFoundException.cs" />
     <Compile Include="Services\DbInteractions\Read.cs" />
     <Compile Include="Services\DbInteractions\Update.cs" />
   </ItemGroup>
@@ -130,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212112109200_Scores.resx">
       <DependentUpon>202212112109200_Scores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212152006257_Scores2nd.resx">
+      <DependentUpon>202212152006257_Scores2nd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
