@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace StartUp.Services.Data
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Candidate> Candidates { get; set; }  //eager
         public DbSet<Attempt> Attempts { get; set; }  //eager
@@ -18,6 +18,7 @@ namespace StartUp.Services.Data
         public DbSet<CandidateDetails> CandidateDetails { get; set; }
 
         public DbSet<Gender> Genders { get; set; }
+        public DbSet<Scores> Scores { get; set; }
 
 
         public AppDbContext() : base("name=MyConnection") 

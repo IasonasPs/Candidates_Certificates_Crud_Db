@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace StartUp.Models.CandidateFolder
 {
-    public class Candidate
+    public class Candidate : IDisposable
     {
         public int  CandidateId { get; set; }
         public string fName { get; set; }
@@ -38,23 +38,15 @@ namespace StartUp.Models.CandidateFolder
             this.lName = lName;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         public override string ToString() 
         {
-            return $"Candidate's name is {fName} {lName}." ;
+            return $"--->Candidate's name is {fName} {lName}." ;
             
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }

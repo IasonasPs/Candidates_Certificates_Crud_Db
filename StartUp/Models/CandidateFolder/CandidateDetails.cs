@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StartUp.Services.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,6 +11,8 @@ namespace StartUp.Models.CandidateFolder
 {
     public class CandidateDetails
     {
+        AppDbContext app = new AppDbContext();
+
         [ForeignKey("Candidate")]
         public int CandidateDetailsId { get; set; }
 
@@ -60,7 +63,7 @@ namespace StartUp.Models.CandidateFolder
             CandidateDetailsId = candidateDetailsId;
             GenderId = genderId;
             NativeLanguage = nativeLanguage;
-            BirthDate = birthDate;
+            BirthDate = birthDate.Date;
             PhotoIdType = photoIdType;
             PhotoIdNumber = photoIdNumber;
             PhotoIdIssueDate = photoIdIssueDate;
@@ -75,9 +78,16 @@ namespace StartUp.Models.CandidateFolder
             MobileNumber = mobileNumber;
         }
 
+
         public override string ToString()
         {
-            return $"Candidate details of Id:{CandidateDetailsId}  GenderId:{GenderId} NativeLanguage:{NativeLanguage} Birth Date:{BirthDate} Id number:{PhotoIdNumber}";
+           string gender = app.Genders.Where(g => g.GenderId == GenderId).SingleOrDefault().ToString();
+                
+            return $"---------------------------------------------------------------------------------------------------------------------\n" +
+                $"Candidate's details:\nId:{CandidateDetailsId},Gender:{gender},NativeLanguage:{NativeLanguage},Birth Date:{BirthDate.Date}," +
+                $"Id Type:{PhotoIdType},Id number:{PhotoIdNumber},Id issue date:{PhotoIdIssueDate.Date},email:{Email},Address:{Address},Alternate Address:{AlternateAddress}," +
+                $"CountryOfresidence:{CountryOfresidence},State:{State},City:{City},PostalCode:{PostalCode},Landline Number:{LandlineNumber},Mobile Number:{MobileNumber}" +
+                $"\n----------------------------------------------------------------------------------------------------------------------";
         }
 
 
