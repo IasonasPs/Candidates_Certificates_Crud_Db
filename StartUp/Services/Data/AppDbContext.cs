@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace StartUp.Services.Data
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Candidate> Candidates { get; set; }  //eager
         public DbSet<Attempt> Attempts { get; set; }  //eager

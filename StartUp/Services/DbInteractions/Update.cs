@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace StartUp.Services.DbInteractions
 {
-    internal class Update
+    public class Update
     {
        static AppDbContext app = new AppDbContext();
 
@@ -219,7 +219,9 @@ namespace StartUp.Services.DbInteractions
                         Console.WriteLine("Type the new mobile number");
                         candidateDetails.MobileNumber= Console.ReadLine();
                         break;
+                        //------------
                 }
+                        app.SaveChanges();
 
                 Console.WriteLine("Do u want to update any other field?");
                 Console.WriteLine("If yes then press 5");
@@ -239,7 +241,8 @@ namespace StartUp.Services.DbInteractions
                 }
                 else
                 {
-                    Console.WriteLine("5 or nothing");
+
+                    Console.WriteLine("Thank you for choosing our method for your Update");
                 }
 
 

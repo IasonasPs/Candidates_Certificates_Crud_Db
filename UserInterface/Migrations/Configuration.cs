@@ -152,22 +152,22 @@
                 var rr = context.Attempts.Add(new Attempt(4, 1, new DateTime(2020, 1, 23), ww));
                 context.SaveChanges();
 
-                var qq1 = context.Scores.Add(new Models.Scores(14, 18, 22, 12));
+                var qq1 = context.Scores.Add(new Models.Scores(14, 19, 22, 12));
                 var ww1 = context.Entry(qq1).Entity.sum;
                 var rr1 = context.Attempts.Add(new Attempt(4, 2, new DateTime(2020, 3, 12), ww1));
                 context.SaveChanges();
 
-                var qq2 = context.Scores.Add(new Models.Scores(7, 18, 25, 12));
+                var qq2 = context.Scores.Add(new Models.Scores(7, 18, 23, 12));
                 var ww2 = context.Entry(qq2).Entity.sum;
                 var rr2 = context.Attempts.Add(new Attempt(4, 4, new DateTime(2020, 7, 18), ww2));
                 context.SaveChanges();
 
-                var qq3 = context.Scores.Add(new Models.Scores(21, 21, 12, 12));
+                var qq3 = context.Scores.Add(new Models.Scores(21, 21, 19, 12));
                 var ww3 = context.Entry(qq3).Entity.sum;
                 var rr3 = context.Attempts.Add(new Attempt(4, 6, new DateTime(2021, 4, 4), ww3));
                 context.SaveChanges();
 
-                var qq4 = context.Scores.Add(new Models.Scores(13, 13, 5, 25));
+                var qq4 = context.Scores.Add(new Models.Scores(13, 13, 19, 25));
                 var ww4 = context.Entry(qq4).Entity.sum;
                 var rr4 = context.Attempts.Add(new Attempt(4, 5, new DateTime(2022, 5, 19), ww4));
                 context.SaveChanges();

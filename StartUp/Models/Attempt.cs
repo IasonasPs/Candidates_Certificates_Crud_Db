@@ -10,7 +10,7 @@ using StartUp.Services.Data;
 
 namespace StartUp.Models
 {
-    public class Attempt
+    public class Attempt : IDisposable
     {
         AppDbContext app  = new AppDbContext();
 
@@ -50,7 +50,6 @@ namespace StartUp.Models
             private set { }
              
         }
-
         
         internal Scores Scores { get; set; }
         
@@ -58,7 +57,6 @@ namespace StartUp.Models
         {
 
         }
-
         public Attempt(int candidateId, int certificateId, DateTime examDate, int candidateScore )
         {
             CandidateId = candidateId;
@@ -67,13 +65,30 @@ namespace StartUp.Models
             CandidateScore = candidateScore;
          
         }
+
+        public override string ToString()
+        {
+            var tempCandidate = app.Candidates.Where(c => c.CandidateId == CandidateId).SingleOrDefault();
+            var tempCertificate = app.Certificates.Where(c => c.CertificateId == CertificateId).SingleOrDefault();
+            return $"Name:{tempCandidate.fName}_{tempCandidate.lName}__Certificate:{tempCertificate.Title}__ExaminationDate:{ExamDate.Month}/{ExamDate.Day}/{ExamDate.Year}" +
+                $"__CandidateScore:{CandidateScore}__Result:{PassOrFail}";
+        }
+
+        public void Dispose()
+        {
+           
+        }
+
+        
+
+
     }
 
 
 
 
 
-    public class Scores
+    public class Scores : IDisposable
     {
         [ForeignKey("Attempt")]
         public int ScoresId { get; set; }
@@ -106,6 +121,15 @@ namespace StartUp.Models
 
         }
 
+
+        public override string ToString()
+        {
+            return $"Score1:{score1},Score2:{score2},Score3:{score3},Score4:{score4}";
+        }
+        public void Dispose()
+        {
+            
+        }
     }
 
 }

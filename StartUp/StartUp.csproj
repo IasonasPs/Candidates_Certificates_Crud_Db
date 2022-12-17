@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{309CFFAE-075C-4C61-9911-6D17EF137E5C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>StartUp</RootNamespace>
     <AssemblyName>StartUp</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -53,51 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202212111136365_InitialCreate.cs" />
-    <Compile Include="Migrations\202212111136365_InitialCreate.designer.cs">
-      <DependentUpon>202212111136365_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111252524_ObjectComplete.cs" />
-    <Compile Include="Migrations\202212111252524_ObjectComplete.designer.cs">
-      <DependentUpon>202212111252524_ObjectComplete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111254225_ObjectComplete1.cs" />
-    <Compile Include="Migrations\202212111254225_ObjectComplete1.designer.cs">
-      <DependentUpon>202212111254225_ObjectComplete1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111443457_ObjectComplete2.cs" />
-    <Compile Include="Migrations\202212111443457_ObjectComplete2.designer.cs">
-      <DependentUpon>202212111443457_ObjectComplete2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111904455_ObjectCompleteVerification.cs" />
-    <Compile Include="Migrations\202212111904455_ObjectCompleteVerification.designer.cs">
-      <DependentUpon>202212111904455_ObjectCompleteVerification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111924151_Certificate.cs" />
-    <Compile Include="Migrations\202212111924151_Certificate.designer.cs">
-      <DependentUpon>202212111924151_Certificate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111941233_Certificate1.cs" />
-    <Compile Include="Migrations\202212111941233_Certificate1.designer.cs">
-      <DependentUpon>202212111941233_Certificate1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212112109200_Scores.cs" />
-    <Compile Include="Migrations\202212112109200_Scores.designer.cs">
-      <DependentUpon>202212112109200_Scores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212152006257_Scores2nd.cs" />
-    <Compile Include="Migrations\202212152006257_Scores2nd.designer.cs">
-      <DependentUpon>202212152006257_Scores2nd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212161737260_AttemptTableFix.cs" />
-    <Compile Include="Migrations\202212161737260_AttemptTableFix.designer.cs">
-      <DependentUpon>202212161737260_AttemptTableFix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212161746380_AttemptTableFixScoresId.cs" />
-    <Compile Include="Migrations\202212161746380_AttemptTableFixScoresId.designer.cs">
-      <DependentUpon>202212161746380_AttemptTableFixScoresId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attempt.cs" />
     <Compile Include="Models\CandidateFolder\Candidate.cs" />
     <Compile Include="Models\CandidateFolder\CandidateDetails.cs" />
@@ -108,6 +66,7 @@
     <Compile Include="Services\Data\AppDbContext.cs" />
     <Compile Include="Services\DbInteractions\Create.cs" />
     <Compile Include="Services\DbInteractions\Delete.cs" />
+    <Compile Include="Services\DbInteractions\InspectCandidate.cs" />
     <Compile Include="Services\DbInteractions\NotFoundException.cs" />
     <Compile Include="Services\DbInteractions\Read.cs" />
     <Compile Include="Services\DbInteractions\Update.cs" />
@@ -118,41 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212111136365_InitialCreate.resx">
-      <DependentUpon>202212111136365_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111252524_ObjectComplete.resx">
-      <DependentUpon>202212111252524_ObjectComplete.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111254225_ObjectComplete1.resx">
-      <DependentUpon>202212111254225_ObjectComplete1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111443457_ObjectComplete2.resx">
-      <DependentUpon>202212111443457_ObjectComplete2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111904455_ObjectCompleteVerification.resx">
-      <DependentUpon>202212111904455_ObjectCompleteVerification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111924151_Certificate.resx">
-      <DependentUpon>202212111924151_Certificate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111941233_Certificate1.resx">
-      <DependentUpon>202212111941233_Certificate1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212112109200_Scores.resx">
-      <DependentUpon>202212112109200_Scores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212152006257_Scores2nd.resx">
-      <DependentUpon>202212152006257_Scores2nd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212161737260_AttemptTableFix.resx">
-      <DependentUpon>202212161737260_AttemptTableFix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212161746380_AttemptTableFixScoresId.resx">
-      <DependentUpon>202212161746380_AttemptTableFixScoresId.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

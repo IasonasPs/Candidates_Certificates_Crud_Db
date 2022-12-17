@@ -179,8 +179,27 @@ namespace StartUp.Services.DbInteractions
             string state = Console.ReadLine();
             Console.WriteLine("Type city");
             string city = Console.ReadLine();
-            Console.WriteLine("Type the postal Code");
-            int postalcode = int.Parse(Console.ReadLine());
+            bool key0 ;
+            int postalcode = 0;
+                    Console.WriteLine("Type the postal Code");
+            do
+            {
+                key0 = false;
+                try
+                {
+                    key0 = false;
+                    postalcode = int.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    key0= true;
+                    Console.WriteLine("Please type a proper postal code number");
+                } 
+            } while (key0);
+
+
+
+
             Console.WriteLine("Type landline number");
             string landline = Console.ReadLine();
             Console.WriteLine("Type a mobile number");
