@@ -15,7 +15,7 @@ namespace UserInterface.Menus
             {
                 key = false;
                 Console.WriteLine("<Administrators Code>: 01123");
-                Console.WriteLine("<Candidates Code>:2357");
+                Console.WriteLine("<Candidates Code>:2357      ");
                 Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
                 Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
                 Console.WriteLine("Welcome....");
